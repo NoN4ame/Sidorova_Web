@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+.main-text {
+  font-size: 18px;
+}
+
+.btn {
+  padding: 17px 57.5px;
+  border: 2px solid #0075ff;
+  color: #0075ff;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  box-sizing: border-box;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  margin-top: 77px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 103px;
+}
+.header__nav section > ul {
+  list-style-type: none;
+}
+.header__nav .feedBack-contacts > ul {
+  list-style-type: none;
+  text-align: right;
+}
+.header__nav .feedBack-contacts > ul > li > a {
+  color: black;
+}
+.header__offer > h1:first-of-type {
+  font-size: 64px;
+  text-transform: uppercase;
+  height: 65px;
+}
+.header__offer > h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.header__offer > .main-text:first-of-type {
+  line-height: 22px;
+  padding-top: 22px;
+  padding-bottom: 39px;
+  border: none;
+  color: #000000;
+}
+.header__offer > .main-text {
+  padding-top: 12px;
+  border-bottom: 0.5px solid #0075ff;
+  color: #0075ff;
+  width: 370px;
+}
+
+.banner {
+  position: relative;
+  margin-top: 80px;
+  padding: 102px 0;
+  background-image: url("../img/wave.jpg");
+}
+.banner__text {
+  border: 1px solid #000000;
+  background-color: #000000;
+  font-size: 18px;
+  box-sizing: border-box;
+  outline: none;
+  color: #FFFFFF;
+  padding: 17.5px 15px;
+  width: 733px;
+}
+
+/*# sourceMappingURL=main.css.map */

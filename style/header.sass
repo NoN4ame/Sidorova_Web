@@ -1,0 +1,61 @@
+@import "variables"
+@import "common-styles"
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+*
+  margin: 0
+  padding: 0
+  font-family: 'Montserrat', sans-serif
+.container
+  width: 1110px
+  margin: 0 auto
+a
+  text-decoration: none
+.header
+  margin-top: 77px
+  &__nav
+    display: flex
+    justify-content: space-between
+    margin-bottom: 103px
+    & section>ul
+      list-style-type: none
+    & .feedBack-contacts>ul
+      list-style-type: none
+      text-align: right
+      &>li>a
+        color: black
+  &__offer
+    &>h1:first-of-type
+      font-size: 64px
+      text-transform: uppercase
+      height: 65px
+    &>h1
+      font-size: $headers
+      text-transform: uppercase
+    &>.main-text:first-of-type
+      line-height: 22px
+      padding-top: 22px
+      padding-bottom: 39px
+      border: none
+      color: #000000
+    &>.main-text
+      padding-top: 12px
+      border-bottom: 0.5px solid $blue
+      color: $blue
+      width: 370px
+.banner
+  position: relative
+  margin-top: 80px
+  padding: 102px 0
+  background-image: url("../img/wave.jpg")
+  &__text
+    border: 1px solid #000000
+    background-color: #000000
+    font-size: $main_text
+    box-sizing: border-box
+    outline: none
+    color: #FFFFFF
+    padding: 17.5px 15px
+    width: 733px
+
+
+
