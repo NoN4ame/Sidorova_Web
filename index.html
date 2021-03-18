@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-<header>
-    <div class="container header">
+<header class="header">
+    <div class="container">
         <div class="header__nav">
             <section class="menu-icon">
                 <!-- <ul>  -->
@@ -30,7 +30,7 @@
             <p class="main-text">Разработка дизайна сайтов<br>
                 для вашего бизнеса</p>
             <button class="btn">Заполнить бриф</button>
-            <p class="main-text">Что такое бриф и зачем его заполнять?</p>
+            <p class="main-text about-briefing">Что такое бриф и зачем его заполнять?</p>
         </div>
     </div>
     <div class="banner">
@@ -40,10 +40,87 @@
     </div>
 </header>
 <main>
-    <div class="developmentStages"></div>
-    <div class="projects"></div>
-    <div class="price"></div>
-    <div class="briefing"></div>
+    <div class="container">
+        <div class="developmentStages">
+            <h1 class="headers">Этапы разработки <span>дизайна</span></h1>
+            <ol class="stages">
+                <li>Заполнение заказчиком/клиентом <span>брифа</span></li>
+                <li>Анализ предоставленных данных, утверждение дедлайнов и стоимости работы</li>
+                <li>Разработка + утверждение прототипа</li>
+                <li>Разработка + утверждение дизайна (в том числе адаптивного)</li>
+                <li>Предоставление итогового дизайн-макета в удобном для верстальщика формате</li>
+            </ol>
+        </div>
+        <div class="projects">
+            <h1 class="headers">Портфолио</h1>
+            <div class="projects__content">
+                <div><img src="img/projects/project_1.jpg" alt=""></div>
+                <div><img src="img/projects/project_2.jpg" alt=""></div>
+                <div><img src="img/projects/project_3.jpg" alt=""></div>
+                <div><img src="img/projects/project_4.jpg" alt=""></div>
+                <div><img src="img/projects/project_5.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="price">
+            <h1 class="headers">вилка <span>цен</span></h1>
+            <div class="price_container">
+                <div class="price__content">
+                    <div class="project">
+                        <p class="project__size">Лендинг до 6 блоков</p>
+                        <p class="project__work">Прототип + дизайн</p>
+                        <p class="project__price">10 000 &#8381;</p>
+                        <p class="project__more">Дополнительно</p>
+                        <p class="project__adaptive">Адаптивный дизайн</p>
+                        <p class="project__price">5 000 &#8381;</p>
+                    </div>
+                </div>
+                <div class="price__content">
+                    <div class="project">
+                        <p class="project__size">Лендинг до 6 блоков</p>
+                        <p class="project__work">Прототип + дизайн</p>
+                        <p class="project__price">10 000 &#8381;</p>
+                        <p class="project__more">Дополнительно</p>
+                        <p class="project__adaptive">Адаптивный дизайн</p>
+                        <p class="project__price">5 000 &#8381;</p>
+                    </div>
+                </div>
+                <div class="price__content">
+                    <div class="project">
+                        <p class="project__size">Лендинг до 6 блоков</p>
+                        <p class="project__work">Прототип + дизайн</p>
+                        <p class="project__price">10 000 &#8381;</p>
+                        <p class="project__more">Дополнительно</p>
+                        <p class="project__adaptive">Адаптивный дизайн</p>
+                        <p class="project__price">5 000 &#8381;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+            <div class="container">
+                <p class="briefing-banner__text banner__text">Для заказа дизайна сайта и начала продуктивного сотрудничества необходимо заполнить бриф.</p>
+            </div>
+        </div>
+    <div class="container briefing">
+        <h1 class="headers">Бриф <span>для заполнения клиентом</span></h1>
+        <p class="remainder">
+            Напоминаю: от того, насколько полно и правильно заполнена анкета,<br>
+            зависит качество и соответствие конечному результату / вашим ожиданиям.
+        </p>
+        <form action="#">
+            <div class="contact">
+                <h1>Контактная информация</h1>
+                <div class="form__container">
+                    <label><input id="CompanyName" type="text"></label>
+                    <label><input id="phone" type="number"></label>
+                    <label><input id="webSite" type="text"></label>
+                    <label><input id="email" type="text"></label>
+                    <label><input id="social" type="text"></label>
+                </div>
+            </div>
+        </form>
+    </div>
 </main>
 <footer></footer>
 </body>
