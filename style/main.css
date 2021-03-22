@@ -32,6 +32,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+}
+
 .container {
   width: 1110px;
   margin: 0 auto;
@@ -78,7 +84,7 @@ a {
   margin-top: 12px;
   border-bottom: 0.5px solid #0075ff;
   color: #0075ff;
-  width: 370px;
+  width: 330px;
   font-size: 16px;
 }
 .header__offer > .about-briefing:hover {
@@ -90,6 +96,8 @@ a {
   margin-top: 77px;
   padding: 102px 0;
   background-image: url("../img/wave.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .banner__text {
   border: 1px solid #000000;
@@ -229,6 +237,81 @@ a {
 
 .briefing {
   margin-top: 80px;
+}
+
+.contact {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.briefing__header {
+  display: flex;
+  justify-content: space-between;
+}
+.briefing__header > h1 {
+  color: #0075ff;
+  font-size: 20px;
+}
+.briefing__header > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.briefing__header > span:first-letter {
+  font-size: 30px;
+  color: #0075ff;
+  font-weight: bold;
+}
+
+.form__container {
+  display: flex;
+  flex-flow: column;
+}
+.form__container label {
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-size: 18px;
+}
+.form__container label:first-child {
+  padding-top: 20px;
+}
+.form__container input {
+  padding: 16px 0 16px 16px;
+  border: 1px solid #CBCBCB;
+  outline: none;
+  font-size: 18px;
+}
+.form__container .btn {
+  margin-top: 40px;
+  width: 260px;
+}
+
+.footer {
+  position: relative;
+  background-color: #000000;
+  height: 312px;
+}
+.footer > .container > .headers {
+  color: #FFFFFF;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.footer > .container > ul > li > a {
+  color: #FFFFFF;
+  list-style-type: none;
+}
+
+#scrollUp {
+  content: "";
+  border: 11px solid #0075ff;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  transform: rotate(45deg);
+  border-bottom: none;
+  border-right: none;
+  top: 161px;
+  right: 359px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -99,4 +99,60 @@
   width: 955px
 .briefing
   margin-top: 80px
+.contact
+  padding-top: 40px
+  padding-bottom: 80px
+.briefing__header
+  display: flex
+  justify-content: space-between
+  &>h1
+    color: $blue
+    font-size: $middle_text
+  &>span
+    font-size: $middle_text
+    font-weight: bold
+    &:first-letter
+      font-size: $headers
+      color: $blue
+      font-weight: bold
+
 .form__container
+  display: flex
+  flex-flow: column
+  & label
+    padding-bottom: 10px
+    padding-top: 30px
+    font-size: $main_text
+    &:first-child
+      padding-top: 20px
+  & input
+    padding: 16px 0 16px 16px
+    border: 1px solid #CBCBCB
+    outline: none
+    font-size: $main_text
+  & .btn
+    margin-top: 40px
+    width: 260px
+.footer
+  position: relative
+  background-color: #000000
+  height: 312px
+  &>.container>.headers
+    color: #FFFFFF
+    padding-top: 80px
+    padding-bottom: 40px
+  &>.container > ul > li > a
+    color: #FFFFFF
+    list-style-type: none
+#scrollUp
+  content: ""
+  border: 11px solid #0075ff
+  height: 30px
+  position: absolute
+  width: 30px
+  transform: rotate(45deg)
+  border-bottom: none
+  border-right: none
+  top: 161px
+  right: 359px
+  cursor: pointer

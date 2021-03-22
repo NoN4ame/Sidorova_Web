@@ -98,10 +98,11 @@
         </div>
     </div>
     <div class="banner">
-            <div class="container">
-                <p class="briefing-banner__text banner__text">Для заказа дизайна сайта и начала продуктивного сотрудничества необходимо заполнить бриф.</p>
-            </div>
+        <div class="container">
+            <p class="briefing-banner__text banner__text">Для заказа дизайна сайта и начала продуктивного сотрудничества
+                необходимо заполнить бриф.</p>
         </div>
+    </div>
     <div class="container briefing">
         <h1 class="headers">Бриф <span>для заполнения клиентом</span></h1>
         <p class="remainder">
@@ -110,18 +111,36 @@
         </p>
         <form action="#">
             <div class="contact">
-                <h1>Контактная информация</h1>
+                <div class="briefing__header">
+                    <h1 class="headers">Контактная информация</h1>
+                    <span>1/5</span>
+                </div>
                 <div class="form__container">
-                    <label><input id="CompanyName" type="text"></label>
-                    <label><input id="phone" type="number"></label>
-                    <label><input id="webSite" type="text"></label>
-                    <label><input id="email" type="text"></label>
-                    <label><input id="social" type="text"></label>
+                    <label for="companyName">1. Название компании</label>
+                    <input id="companyName" type="text">
+                    <label for="phone">2. Телефон</label>
+                    <input id="phone" type="number">
+                    <label for="webSite">3. Сайт (если требуется редизайн уже существующего сайта)</label>
+                    <input id="webSite" type="text">
+                    <label for="email">4. E-mail</label>
+                    <input id="email" type="text">
+                    <label for="social">5. Соцсети</label>
+                    <input id="social" type="text">
+                    <button class="btn">Далее</button>
                 </div>
             </div>
         </form>
     </div>
 </main>
-<footer></footer>
+<footer class="footer">
+    <div class="container">
+        <h1 class="headers">Контакты <span>для связи со мной</span></h1>
+        <ul>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">telegram</a></li>
+        </ul>
+        <span id="scrollUp"></span>
+    </div>
+</footer>
 </body>
 </html>
