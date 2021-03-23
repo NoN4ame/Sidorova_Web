@@ -142,27 +142,6 @@
         <span id="scrollUp"></span>
     </div>
 </footer>
-<script>
-    //let nav = document.querySelectorAll('.menu-icon')
-    //nav.forEach(item => item.addEventListener('click', (e) => {
-    //    if (e.target === item) {
-    //        console.log('123')
-    //
-    //    }
-    //}))
-    let nav = document.querySelectorAll('.icon')
-    for (let i = 0; i < nav.length; i++) {
-        document.querySelector('.menu-icon').addEventListener('click', function (event) {
-            console.log(event.target);
-            if ((event.target === this || nav[i]) && nav[i].classList.contains('closeIcon') === true) {
-                nav[i].classList.remove('closeIcon')
-                console.log(event.target)
-            } else if (event.target === this || nav[i]) {
-                nav[i].classList.add('closeIcon')
-                console.log(event.target)
-            }
-        })
-    }
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
