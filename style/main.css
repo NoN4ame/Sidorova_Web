@@ -4,7 +4,6 @@
 }
 
 .btn {
-  padding: 16px 56.5px;
   border: 2px solid #0075ff;
   color: #0075ff;
   background-color: transparent;
@@ -13,12 +12,23 @@
   outline: none;
   box-sizing: border-box;
   transition: background-color 0.4s;
+  height: 56px;
+  width: 261px;
 }
 .btn:hover {
   cursor: pointer;
   transition: background-color 0.3s;
   color: #FFFFFF;
   background-color: #0075ff;
+}
+.btn:focus {
+  border: 3px solid #0075ff;
+  background-color: #FFFFFF;
+  color: #0075ff;
+}
+.btn:active {
+  background-color: #0075ff;
+  color: #FFFFFF;
 }
 
 .headers {
@@ -28,6 +38,24 @@
 }
 .headers > span {
   font-size: 20px;
+}
+
+.links {
+  color: #000000;
+}
+.links:hover {
+  color: #0075ff;
+  text-decoration: underline;
+}
+.links:focus {
+  font-weight: bold;
+  color: #0075ff;
+  text-decoration: none;
+}
+.links:active {
+  color: #0075ff;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 * {
@@ -67,9 +95,6 @@ a {
   list-style-type: none;
   text-align: right;
 }
-.header__nav .feedBack-contacts > ul > li > a {
-  color: black;
-}
 .header__offer > h1:first-of-type {
   font-size: 64px;
   text-transform: uppercase;
@@ -86,13 +111,19 @@ a {
 }
 .header__offer > .about-briefing {
   margin-top: 12px;
-  border-bottom: 0.5px solid #0075ff;
   color: #0075ff;
-  width: 330px;
   font-size: 16px;
+  text-decoration: underline;
 }
 .header__offer > .about-briefing:hover {
   cursor: pointer;
+  text-decoration: underline #0075ff;
+}
+.header__offer > .about-briefing:active {
+  font-weight: bold;
+}
+.header__offer > .about-briefing:focus {
+  font-weight: bold;
 }
 
 .banner {
@@ -153,6 +184,28 @@ a {
 .closeIcon:nth-child(3) {
   width: 0 !important;
   opacity: 0 !important;
+}
+
+.nav {
+  position: relative;
+  left: 0;
+  top: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.nav > ul {
+  display: flex;
+}
+.nav > ul > li {
+  padding-right: 80px;
+  font-size: 16px;
+}
+.nav > ul > li:last-child {
+  padding: 0;
+}
+
+.active {
+  opacity: 1;
 }
 
 .developmentStages {
@@ -274,6 +327,13 @@ a {
 }
 .price__content .project__more:hover {
   cursor: pointer;
+  text-shadow: 1px 0 #0075ff;
+}
+.price__content .project__more:active {
+  text-shadow: 1px 0 #0075ff;
+}
+.price__content .project__more:focus {
+  text-shadow: 1px 0 #0075ff;
 }
 
 .briefing-banner__text {
@@ -346,16 +406,9 @@ a {
 }
 
 #scrollUp {
-  content: "";
-  border: 11px solid #0075ff;
-  height: 30px;
-  position: absolute;
-  width: 30px;
-  transform: rotate(45deg);
-  border-bottom: none;
-  border-right: none;
-  top: 161px;
-  right: 530px;
+  position: relative;
+  bottom: 76px;
+  left: 1021px;
   cursor: pointer;
 }
 

@@ -95,6 +95,11 @@
       margin-bottom: 20px
       &:hover
         cursor: pointer
+        text-shadow: 1px 0 $blue
+      &:active
+        text-shadow: 1px 0 $blue
+      &:focus
+        text-shadow: 1px 0 $blue
 .briefing-banner__text
   width: 955px
 .briefing
@@ -145,14 +150,7 @@
     color: #FFFFFF
     list-style-type: none
 #scrollUp
-  content: ""
-  border: 11px solid #0075ff
-  height: 30px
-  position: absolute
-  width: 30px
-  transform: rotate(45deg)
-  border-bottom: none
-  border-right: none
-  top: 161px
-  right: 530px
+  position: relative
+  bottom: 76px
+  left: 1021px
   cursor: pointer

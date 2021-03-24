@@ -1,7 +1,6 @@
 .main-text
   font-size: $main_text
 .btn
-  padding: 16px 56.5px
   border: 2px solid $blue
   color: $blue
   background-color: transparent
@@ -10,14 +9,37 @@
   outline: none
   box-sizing: border-box
   transition: background-color 0.4s
+  height: 56px
+  width: 261px
   &:hover
     cursor: pointer
     transition: background-color 0.3s
     color: #FFFFFF
     background-color: $blue
+  &:focus
+    border: 3px solid $blue
+    background-color: #FFFFFF
+    color: $blue
+  &:active
+    background-color: $blue
+    color: #FFFFFF
 .headers
   text-transform: uppercase
   font-size: $headers
   font-weight: bold
   &>span
     font-size: $middle_text
+.links
+  color: #000000
+  &:hover
+    color: $blue
+    text-decoration: underline
+  &:focus
+    font-weight: bold
+    color: $blue
+    text-decoration: none
+  &:active
+    color: $blue
+    text-decoration: underline
+    font-weight: 500
+

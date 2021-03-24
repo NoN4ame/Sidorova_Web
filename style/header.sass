@@ -26,8 +26,6 @@ a
     & .feedBack-contacts>ul
       list-style-type: none
       text-align: right
-      &>li>a
-        color: black
   &__offer
     &>h1:first-of-type
       font-size: 64px
@@ -42,12 +40,18 @@ a
       padding-bottom: 38px
     &>.about-briefing
       margin-top: 12px
-      border-bottom: 0.5px solid $blue
+      //border-bottom: 0.5px solid $blue
       color: $blue
-      width: 330px
+      //width: 330px
       font-size: $social
+      text-decoration: underline
       &:hover
         cursor: pointer
+        text-decoration: underline $blue
+      &:active
+        font-weight: bold
+      &:focus
+        font-weight: bold
 .banner
   position: relative
   margin-top: 77px
@@ -97,5 +101,22 @@ a
   &:nth-child(3)
     width: 0!important
     opacity: 0!important
+
+.nav
+  position: relative
+  left: 0
+  top: 2px
+  opacity: 0
+  transition: opacity 0.2s
+  &>ul
+    display: flex
+    &>li
+      padding-right: 80px
+      font-size: $social
+      &:last-child
+        padding: 0
+.active
+  opacity: 1
+
 
 
