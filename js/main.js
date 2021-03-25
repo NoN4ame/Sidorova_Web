@@ -1,7 +1,7 @@
 const menu = {
     init() {
         this.showMenu()
-
+        this.scrollNavigate()
     },
     showMenu() {
         let nav = document.querySelectorAll('.icon')
@@ -15,6 +15,7 @@ const menu = {
                 }
             })
             this.renderNavigate()
+            this.scrollNavigate()
         })
 
     },
@@ -22,10 +23,10 @@ const menu = {
         document.querySelector('.menu-icon').insertAdjacentHTML('afterend',
             `<section class="nav">
                     <ul>
-                    <li>Портфолио</li>
-                    <li>Вилка цен</li>
-                    <li>Бриф</li>
-                    <li>Контакты</li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#price">Вилка цен</a></li>
+                    <li><a href="#briefing">Бриф</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                     </ul>
                   </section>`)
     },
@@ -43,6 +44,19 @@ const menu = {
     },
     removeNavigate() {
         document.querySelector('.nav').remove()
+    },
+    scrollNavigate(){
+        let links = document.querySelectorAll('a[href^="#"]')
+        for (let link of links){
+            link.addEventListener('click', (e) => {
+                e.preventDefault()
+                const id = link.getAttribute('href');
+                document.querySelector(id).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            })
+        }
     }
 }
 menu.init()

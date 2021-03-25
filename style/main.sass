@@ -133,8 +133,15 @@
   & input
     padding: 16px 0 16px 16px
     border: 1px solid #CBCBCB
-    outline: none
     font-size: $main_text
+    &:hover
+      color: #6D6D6D
+    &:focus
+      outline: 2px solid #6D6D6D
+      color: #6D6D6D
+    &:active
+      color: #6D6D6D
+      outline: none
   & .btn
     margin-top: 40px
     width: 260px
@@ -142,6 +149,7 @@
   position: relative
   background-color: #000000
   height: 312px
+  overflow: hidden
   &>.container>.headers
     color: #FFFFFF
     padding-top: 80px

@@ -15,7 +15,7 @@ input::-webkit-inner-spin-button
 a
   text-decoration: none
 .header
-  margin-top: 77px
+  padding-top: 77px
   margin-bottom: 78px
   &__nav
     display: flex
@@ -27,6 +27,7 @@ a
       list-style-type: none
       text-align: right
   &__offer
+    display: inline-block
     &>h1:first-of-type
       font-size: 64px
       text-transform: uppercase
@@ -40,18 +41,21 @@ a
       padding-bottom: 38px
     &>.about-briefing
       margin-top: 12px
-      //border-bottom: 0.5px solid $blue
       color: $blue
-      //width: 330px
       font-size: $social
       text-decoration: underline
+      outline: none
       &:hover
         cursor: pointer
-        text-decoration: underline $blue
+        color: #000000
+        text-decoration: underline
       &:active
-        font-weight: bold
+        color: #000000
+        text-decoration: underline
       &:focus
         font-weight: bold
+        color: $blue
+        text-decoration: underline
 .banner
   position: relative
   margin-top: 77px
@@ -110,11 +114,14 @@ a
   transition: opacity 0.2s
   &>ul
     display: flex
+    text-decoration: none
     &>li
       padding-right: 80px
       font-size: $social
       &:last-child
         padding: 0
+      &>a
+        color: black
 .active
   opacity: 1
 

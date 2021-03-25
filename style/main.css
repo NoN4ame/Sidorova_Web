@@ -42,6 +42,7 @@
 
 .links {
   color: #000000;
+  outline: none;
 }
 .links:hover {
   color: #0075ff;
@@ -49,7 +50,7 @@
 }
 .links:focus {
   font-weight: bold;
-  color: #0075ff;
+  color: #0075ff !important;
   text-decoration: none;
 }
 .links:active {
@@ -80,7 +81,7 @@ a {
 }
 
 .header {
-  margin-top: 77px;
+  padding-top: 77px;
   margin-bottom: 78px;
 }
 .header__nav {
@@ -94,6 +95,9 @@ a {
 .header__nav .feedBack-contacts > ul {
   list-style-type: none;
   text-align: right;
+}
+.header__offer {
+  display: inline-block;
 }
 .header__offer > h1:first-of-type {
   font-size: 64px;
@@ -114,16 +118,21 @@ a {
   color: #0075ff;
   font-size: 16px;
   text-decoration: underline;
+  outline: none;
 }
 .header__offer > .about-briefing:hover {
   cursor: pointer;
-  text-decoration: underline #0075ff;
+  color: #000000;
+  text-decoration: underline;
 }
 .header__offer > .about-briefing:active {
-  font-weight: bold;
+  color: #000000;
+  text-decoration: underline;
 }
 .header__offer > .about-briefing:focus {
   font-weight: bold;
+  color: #0075ff;
+  text-decoration: underline;
 }
 
 .banner {
@@ -195,6 +204,7 @@ a {
 }
 .nav > ul {
   display: flex;
+  text-decoration: none;
 }
 .nav > ul > li {
   padding-right: 80px;
@@ -202,6 +212,9 @@ a {
 }
 .nav > ul > li:last-child {
   padding: 0;
+}
+.nav > ul > li > a {
+  color: black;
 }
 
 .active {
@@ -382,8 +395,18 @@ a {
 .form__container input {
   padding: 16px 0 16px 16px;
   border: 1px solid #CBCBCB;
-  outline: none;
   font-size: 18px;
+}
+.form__container input:hover {
+  color: #6D6D6D;
+}
+.form__container input:focus {
+  outline: 2px solid #6D6D6D;
+  color: #6D6D6D;
+}
+.form__container input:active {
+  color: #6D6D6D;
+  outline: none;
 }
 .form__container .btn {
   margin-top: 40px;
@@ -394,6 +417,7 @@ a {
   position: relative;
   background-color: #000000;
   height: 312px;
+  overflow: hidden;
 }
 .footer > .container > .headers {
   color: #FFFFFF;
