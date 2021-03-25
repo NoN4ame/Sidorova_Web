@@ -56,6 +56,16 @@ a
         font-weight: bold
         color: $blue
         text-decoration: underline
+.about-briefing__popUp
+  float: right
+  position: relative
+  left: -1070px
+  top: 130px
+  opacity: 0
+  &.popUpActive
+    left: 0
+    opacity: 1
+    transition: left 0.3s, opacity 0.4s
 .banner
   position: relative
   margin-top: 77px
