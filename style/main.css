@@ -137,15 +137,37 @@ a {
 
 .about-briefing__popUp {
   float: right;
+  transition: left 1s, opacity 0.1s;
   position: relative;
-  left: -1070px;
-  top: 130px;
+  top: -60px;
   opacity: 0;
+  font-size: 18px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 356px;
+  background-color: #FFFFFF;
+  z-index: 1000;
+}
+.about-briefing__popUp > p {
+  padding: 44px 52px 30px 52px;
 }
 .about-briefing__popUp.popUpActive {
-  left: 0;
   opacity: 1;
-  transition: left 0.3s, opacity 0.4s;
+  transition: opacity 0.1s;
+}
+.about-briefing__popUp > button {
+  border: none;
+  height: 26px;
+  background-color: transparent;
+  position: absolute;
+  top: 18px;
+  right: 17.5px;
+}
+.about-briefing__popUp > button:focus {
+  outline: 3px solid #0075ff;
+}
+.about-briefing__popUp > button > .closePopUp {
+  cursor: pointer;
 }
 
 .banner {
