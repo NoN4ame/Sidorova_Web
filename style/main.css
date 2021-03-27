@@ -270,10 +270,10 @@ a {
   padding-bottom: 40px;
   font-size: 18px;
 }
-.developmentStages > .stages > li > span {
+.developmentStages > .stages > li > a {
   color: #0075ff;
 }
-.developmentStages > .stages > li > span:hover {
+.developmentStages > .stages > li > a:hover {
   cursor: pointer;
 }
 .developmentStages > .stages > li:before {

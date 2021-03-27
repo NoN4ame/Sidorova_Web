@@ -23,10 +23,10 @@ const menu = {
         document.querySelector('.menu-icon').insertAdjacentHTML('afterend',
             `<section class="nav">
                     <ul>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                    <li><a href="#price">Вилка цен</a></li>
-                    <li><a href="#briefing">Бриф</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a class="links" href="#portfolio">Портфолио</a></li>
+                    <li><a class="links" href="#price">Вилка цен</a></li>
+                    <li><a class="links" href="#briefing">Бриф</a></li>
+                    <li><a class="links" href="#contacts">Контакты</a></li>
                     </ul>
                   </section>`)
     },
