@@ -59,6 +59,50 @@
   font-weight: 500;
 }
 
+.form__buttons > :first-child {
+  margin-right: 64px;
+}
+
+.briefing__links {
+  display: flex;
+}
+.briefing__links > ul {
+  list-style-type: none;
+  padding-top: 22px;
+  width: 100%;
+}
+.briefing__links > ul:first-child {
+  margin-right: 84px;
+  margin-bottom: 61px;
+}
+.briefing__links > ul > li > p {
+  color: #0075ff;
+}
+.briefing__links > ul > li > input {
+  margin-bottom: 20px;
+  width: 96.5%;
+}
+
+textarea {
+  border: 1px solid #CBCBCB;
+  resize: none;
+  font-size: 18px;
+  text-indent: 16px;
+  text-transform: capitalize;
+  padding-top: 16px;
+}
+textarea:hover {
+  color: #6D6D6D;
+}
+textarea:focus {
+  outline: 2px solid #6D6D6D;
+  color: #6D6D6D;
+}
+textarea:active {
+  color: #6D6D6D;
+  outline: none;
+}
+
 * {
   margin: 0;
   padding: 0;

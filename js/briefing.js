@@ -2,7 +2,7 @@ const answer = []
 const briefing = {
     init() {
         this.aboutBriefing()
-        this.renderTemplate(1)
+        templates[2].design(3)
         this.briefing()
     },
     aboutBriefing() {
@@ -49,37 +49,52 @@ const briefing = {
     },
     briefing() {
         let allInputs = Array.from(document.getElementsByTagName('input'))
+        let id = parseInt(document.getElementById('currentId').textContent)
         document.getElementById('form').addEventListener('click', (e) => {
             e.preventDefault()
-            if (e.target === document.getElementById('next')) {
-                questions[0].answers = {
-                    nameCompany: allInputs[0].value,
-                    phone: allInputs[1].value,
-                    webSite: allInputs[2].value,
-                    email: allInputs[3].value,
-                    social: allInputs[4].value
-                }
-                let next = id++
-                this.renderTemplate(next)
-                document.getElementById('test').addEventListener('click', () => console.log(id))
-            } else if (e.target === document.getElementById('back')) {
-                console.log(id)
-                document.getElementById('test').addEventListener('click', () => console.log(id))
-                this.renderTemplate(id--)
+            if (e.target === document.getElementById('next') && id < 5) {
+                //questions[0].answers = {
+                //    nameCompany: allInputs[0].value,
+                //    phone: allInputs[1].value,
+                //    webSite: allInputs[2].value,
+                //    email: allInputs[3].value,
+                //    social: allInputs[4].value
+                //}
+                console.log(id);
+                id++
+                this.renderTemplate(id)
+            } else if (e.target === document.getElementById('back') && id > 1) {
+
+                id--
+                this.renderTemplate(id)
             }
         })
     },
     renderTemplate(id) {
-        let ite = templates[0].contacts(id)
         switch (id) {
-            case ite:
+            case 1:
                 if (id === 1) {
                     templates[0].contacts(id)
                 }
                 break
-            case id:
+            case 2:
                 if (id === 2) {
-                    templates[0].aboutCompany(id)
+                    templates[1].aboutCompany(id)
+                }
+                break
+            case 3:
+                if (id === 3) {
+                    templates[2].design(id)
+                }
+                break
+            case 4:
+                if (id === 4){
+                    templates[3].preferences(id)
+                }
+                break
+            case 5:
+                if (id === 5) {
+                    templates[4].feedBack(id)
                 }
         }
     }
