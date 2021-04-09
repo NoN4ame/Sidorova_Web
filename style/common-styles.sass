@@ -55,11 +55,13 @@
     &:first-child
       margin-right: 84px
       margin-bottom: 61px
+    &>li
+      margin-bottom: 20px
     &>li>p
       color: $blue
     &>li>input
-      margin-bottom: 20px
       width: 96.5%
+
 textarea
   border: 1px solid #CBCBCB
   resize: none
@@ -75,3 +77,22 @@ textarea
   &:active
     color: #6D6D6D
     outline: none
+.block
+  border-color: #B0B0B0 !important
+  color: #B0B0B0 !important
+  outline: none !important
+  &:hover
+    color: #B0B0B0!important
+    background-color: transparent!important
+    cursor: default
+  &:active
+    color: #B0B0B0
+    outline: none
+.notValid
+  border-color: red !important
+.error
+  margin-top: 5px
+  padding: 16px 0 16px 16px
+  background-color: rgba(187, 0, 0, 0.13)
+  color: #BB0000
+  font-size: $main_text

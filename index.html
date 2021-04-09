@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Web-Design</title>
     <link rel="stylesheet" href="style/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header id="nav" class="header">
-    <div class="container">
+    <div class="container header__content">
         <div class="header__nav">
             <section class="menu-icon">
                 <ul>
@@ -29,7 +30,7 @@
             <h1 class="headers">Anastasia</h1>
             <p class="main-text">Разработка дизайна сайтов<br>
                 для вашего бизнеса</p>
-            <button class="btn">Заполнить бриф</button>
+            <a href="#briefing"><button class="btn">Заполнить бриф</button></a>
             <p class="main-text about-briefing">Что такое бриф и зачем его заполнять?</p>
         </div>
     </div>
@@ -52,7 +53,9 @@
             </ol>
         </div>
         <div class="projects">
+            <div class="projects__header">
             <h1 id="portfolio" class="headers">Портфолио</h1>
+            </div>
             <div class="projects__content">
                 <div><img src="img/projects/project_1.jpg" alt=""></div>
                 <div><img src="img/projects/project_2.jpg" alt=""></div>
@@ -124,8 +127,9 @@
     </div>
 </footer>
 <script src="js/questions.js"></script>
+<script src="js/validation.js"></script>
 <script src="js/navigate.js"></script>
 <script src="js/briefing.js"></script>
-
+<script src="js/adaptive.js"></script>
 </body>
 </html>

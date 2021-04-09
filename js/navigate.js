@@ -9,9 +9,13 @@ const menu = {
         document.querySelector('.menu-icon').addEventListener('click', (e) => {
             nav.forEach(item => {
                 if ((e.target === menuIcon || item) && item.classList.contains('closeIcon') === true) {
+                    document.querySelector('.feedBack-contacts').classList.remove('test')
                     item.classList.remove('closeIcon')
                 } else if (e.target === menuIcon || item) {
                     item.classList.add('closeIcon')
+                    if (document.body.clientWidth <= 1024 && item.classList.contains('closeIcon') === true){
+                        document.querySelector('.feedBack-contacts').classList.toggle('test')
+                    }
                 }
             })
             this.renderNavigate()

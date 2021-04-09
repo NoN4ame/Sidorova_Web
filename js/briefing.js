@@ -1,9 +1,7 @@
-const answer = []
 const briefing = {
     init() {
         this.aboutBriefing()
-        templates[2].design(3)
-        this.briefing()
+        templates[0].contacts(1)
     },
     aboutBriefing() {
         document.querySelector('.about-briefing').addEventListener('click', (e) => {
@@ -34,6 +32,7 @@ const briefing = {
     },
     showPopUp() {
         document.querySelector('.about-briefing__popUp').classList.add('popUpActive')
+
     },
     closePopUp() {
         document.querySelector('.closePopUp').addEventListener('click', function (e) {
@@ -47,56 +46,48 @@ const briefing = {
             }
         })
     },
-    briefing() {
-        let allInputs = Array.from(document.getElementsByTagName('input'))
-        let id = parseInt(document.getElementById('currentId').textContent)
-        document.getElementById('form').addEventListener('click', (e) => {
-            e.preventDefault()
-            if (e.target === document.getElementById('next') && id < 5) {
-                //questions[0].answers = {
-                //    nameCompany: allInputs[0].value,
-                //    phone: allInputs[1].value,
-                //    webSite: allInputs[2].value,
-                //    email: allInputs[3].value,
-                //    social: allInputs[4].value
-                //}
-                console.log(id);
-                id++
-                this.renderTemplate(id)
-            } else if (e.target === document.getElementById('back') && id > 1) {
-
-                id--
-                this.renderTemplate(id)
-            }
-        })
-    },
-    renderTemplate(id) {
-        switch (id) {
-            case 1:
-                if (id === 1) {
-                    templates[0].contacts(id)
-                }
-                break
-            case 2:
-                if (id === 2) {
-                    templates[1].aboutCompany(id)
-                }
-                break
-            case 3:
-                if (id === 3) {
-                    templates[2].design(id)
-                }
-                break
-            case 4:
-                if (id === 4){
-                    templates[3].preferences(id)
-                }
-                break
-            case 5:
-                if (id === 5) {
-                    templates[4].feedBack(id)
-                }
+    nextPage(id) {
+        if (id < 5) {
+            id++
+            renderTemplate(id)
+        } else if (id > 1) {
+            id--
+            this.backPage(id)
         }
+    },
+    backPage(id) {
+        id--
+        renderTemplate(id)
     }
 }
+
+function renderTemplate(id) {
+    switch (id) {
+        case 1:
+            if (id === 1) {
+                templates[0].contacts(id)
+            }
+            break
+        case 2:
+            if (id === 2) {
+                templates[1].aboutCompany(id)
+            }
+            break
+        case 3:
+            if (id === 3) {
+                templates[2].design(id)
+            }
+            break
+        case 4:
+            if (id === 4) {
+                templates[3].preferences(id)
+            }
+            break
+        case 5:
+            if (id === 5) {
+                templates[4].feedBack(id)
+            }
+    }
+}
+
 briefing.init()
