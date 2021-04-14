@@ -7,8 +7,10 @@
   font-family: 'Montserrat', sans-serif
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
-  /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none
+input[type='number']
+  -moz-appearance: textfield
+
 .container
   width: 1110px
   margin: 0 auto
@@ -67,7 +69,7 @@ a
   box-sizing: border-box
   height: 356px
   background-color: #FFFFFF
-  z-index: 1000
+  width: 556px
   &>p
     padding: 44px 52px 30px 52px
   &.popUpActive

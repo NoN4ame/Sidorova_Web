@@ -3,6 +3,8 @@
 @import "variables"
 @import "adaptive/tablet"
 @import "adaptive/phone"
+main
+  position: relative
 .developmentStages
   margin-bottom: 80px
   &>h1
@@ -68,9 +70,8 @@
 .price_container
   display: flex
   justify-content: space-between
-.price__content
-  display: flex
   margin-top: 40px
+.price__content
   & .project
     font-size: $middle_text
     & >p:last-child
@@ -95,17 +96,11 @@
       color: $blue
       margin-top: 23px
       margin-bottom: 20px
-      &:hover
-        cursor: pointer
-        text-shadow: 1px 0 $blue
-      &:active
-        text-shadow: 1px 0 $blue
-      &:focus
-        text-shadow: 1px 0 $blue
 .briefing-banner__text
   width: 955px
 .briefing
   margin-top: 80px
+  position: relative
 .contact
   padding-top: 40px
   padding-bottom: 80px
@@ -159,10 +154,10 @@
   &>.container > ul > li > a
     color: #FFFFFF
     list-style-type: none
-#scrollUp
-  position: relative
-  bottom: 76px
-  left: 1021px
-  cursor: pointer
-.test
-  opacity: 0
+  &>.container>a
+    position: relative
+    bottom: 76px
+    left: 1021px
+    cursor: pointer
+
+

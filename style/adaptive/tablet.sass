@@ -1,6 +1,6 @@
-@media (max-width: 1024px)
+@media screen and (max-width: 1024px)
   .container
-    width: 1024px - 38px
+    width: 95%
     overflow: hidden
   .header__content
     height: 440px
@@ -9,12 +9,75 @@
       margin-top: 100px
       &>.container>.banner__text:first-child
         text-align: center
-        width: 100%
+  .nav
+    left: 5%
   .projects__header
     display: flex
     justify-content: space-between
   #scrollUp
-    left: 867px!important
+    left: 867px
+  .invisible
+    opacity: 0
 
-@media (min-width: 768px)
+@media screen and (min-width: 768px) and (orientation: portrait)
+  .developmentStages > .stages > li
+    display: flex
+    height: 35px
+    align-items: center
+    &:last-child
+      width: 80%
+    &:nth-child(2)
+      width: 85%
+  .price_container
+    display: block !important
+  .price__content
+    display: flex
+    justify-content: space-between
+    padding: 0
+    margin-bottom: 80px
+  .project__price
+    padding: 0 !important
+    border: none !important
+  .project__moreInfo
+    border-left: 2px solid black
+    padding-left: 25px
+  .price__content:last-child>.price__content
+    padding-left: 20px
+  .briefing-banner__text
+    width: 100% !important
+  .about-briefing__popUp
+    top: -39px
+    width: 356px
+    height: auto
+    font-size: 16px
+    &>p
+      padding: 44px 44px 44px 29px
+    &>img
+      display: none
 
+@media screen and (width: 1024px) and (orientation: portrait)
+  .developmentStages > .stages > li
+    &:last-child
+      width: 100%
+  .price_container
+    display: flex !important
+  .price__content
+    display: block
+  .project__moreInfo
+    border: none
+    border-top: 2px solid black
+    padding: 0
+    margin-top: 25px
+  .about-briefing__popUp
+    width: 556px
+    font-size: 18px
+    top: -57px
+    height: 356px
+    &>p
+      padding: 44px 52px 30px 52px
+    &>img
+      display: block
+
+@media screen and (min-width: 1025px)
+  #slideNext
+    display: none

@@ -132,6 +132,16 @@ textarea:active {
   font-size: 18px;
 }
 
+.shadow {
+  position: absolute;
+  bottom: 5%;
+  z-index: 1000;
+  height: 362px;
+  width: 556px;
+  left: 40%;
+  background-color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -140,8 +150,11 @@ textarea:active {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .container {
@@ -219,7 +232,7 @@ a {
   box-sizing: border-box;
   height: 356px;
   background-color: #FFFFFF;
-  z-index: 1000;
+  width: 556px;
 }
 .about-briefing__popUp > p {
   padding: 44px 52px 30px 52px;
@@ -329,9 +342,9 @@ a {
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .container {
-    width: 986px;
+    width: 95%;
     overflow: hidden;
   }
 
@@ -344,7 +357,10 @@ a {
   }
   .header > .banner > .container > .banner__text:first-child {
     text-align: center;
-    width: 100%;
+  }
+
+  .nav {
+    left: 5%;
   }
 
   .projects__header {
@@ -353,9 +369,119 @@ a {
   }
 
   #scrollUp {
-    left: 867px !important;
+    left: 867px;
+  }
+
+  .invisible {
+    opacity: 0;
   }
 }
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .developmentStages > .stages > li {
+    display: flex;
+    height: 35px;
+    align-items: center;
+  }
+  .developmentStages > .stages > li:last-child {
+    width: 80%;
+  }
+  .developmentStages > .stages > li:nth-child(2) {
+    width: 85%;
+  }
+
+  .price_container {
+    display: block !important;
+  }
+
+  .price__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 80px;
+  }
+
+  .project__price {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .project__moreInfo {
+    border-left: 2px solid black;
+    padding-left: 25px;
+  }
+
+  .price__content:last-child > .price__content {
+    padding-left: 20px;
+  }
+
+  .briefing-banner__text {
+    width: 100% !important;
+  }
+
+  .about-briefing__popUp {
+    top: -39px;
+    width: 356px;
+    height: auto;
+    font-size: 16px;
+  }
+  .about-briefing__popUp > p {
+    padding: 44px 44px 44px 29px;
+  }
+  .about-briefing__popUp > img {
+    display: none;
+  }
+}
+@media screen and (width: 1024px) and (orientation: portrait) {
+  .developmentStages > .stages > li:last-child {
+    width: 100%;
+  }
+
+  .price_container {
+    display: flex !important;
+  }
+
+  .price__content {
+    display: block;
+  }
+
+  .project__moreInfo {
+    border: none;
+    border-top: 2px solid black;
+    padding: 0;
+    margin-top: 25px;
+  }
+
+  .about-briefing__popUp {
+    width: 556px;
+    font-size: 18px;
+    top: -57px;
+    height: 356px;
+  }
+  .about-briefing__popUp > p {
+    padding: 44px 52px 30px 52px;
+  }
+  .about-briefing__popUp > img {
+    display: block;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #slideNext {
+    display: none;
+  }
+}
+@media screen and (min-width: 319px) and (max-width: 768px) {
+  .feedBack-contacts {
+    display: none;
+  }
+
+  .header__offer > h1:first-of-type {
+    font-size: 48px;
+  }
+}
+main {
+  position: relative;
+}
+
 .developmentStages {
   margin-bottom: 80px;
 }
@@ -437,12 +563,9 @@ a {
 .price_container {
   display: flex;
   justify-content: space-between;
-}
-
-.price__content {
-  display: flex;
   margin-top: 40px;
 }
+
 .price__content .project {
   font-size: 20px;
 }
@@ -473,16 +596,6 @@ a {
   margin-top: 23px;
   margin-bottom: 20px;
 }
-.price__content .project__more:hover {
-  cursor: pointer;
-  text-shadow: 1px 0 #0075ff;
-}
-.price__content .project__more:active {
-  text-shadow: 1px 0 #0075ff;
-}
-.price__content .project__more:focus {
-  text-shadow: 1px 0 #0075ff;
-}
 
 .briefing-banner__text {
   width: 955px;
@@ -490,6 +603,7 @@ a {
 
 .briefing {
   margin-top: 80px;
+  position: relative;
 }
 
 .contact {
@@ -563,16 +677,11 @@ a {
   color: #FFFFFF;
   list-style-type: none;
 }
-
-#scrollUp {
+.footer > .container > a {
   position: relative;
   bottom: 76px;
   left: 1021px;
   cursor: pointer;
-}
-
-.test {
-  opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
