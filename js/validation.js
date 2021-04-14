@@ -156,12 +156,31 @@ const validation = function () {
                 }
                 return false
             }
-            const filtred = answer.filter(el => hasVal(el))
-            answer = filtred
-            console.log(answer);
+            const filtered = answer.filter(el => hasVal(el))
+            answer = filtered
+
         }
     })
 }
+//const submitBrif = function () {
+//    document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
+//    let modularWindow = `<div class="shadow">
+//                            <div class="modul">
+//                            <p>Спасибо за подробное заполнения брифа.<br>
+//                            Сразу же после ознакомления я свяжусь с вами.</p>
+//                            <button>Хорошего дня!</button>
+//                            </div>
+//                        </div>`
+//    document.querySelector('.briefing').insertAdjacentHTML('beforebegin', modularWindow)
+//    let containers = document.querySelectorAll('.container')
+//    let banner = document.querySelectorAll('.banner')
+//    containers.forEach(el => {
+//        el.style.filter = 'brightness(0.5)'
+//    })
+//    banner.forEach(el => {
+//        el.style.filter = 'brightness(0.5)'
+//    })
+//}
 // Рендер ответов после перехода между страницами брифинга
 const renderAnswers = () => {
     for (let i = 0; i < input.length; i++) {
@@ -175,3 +194,4 @@ const renderAnswers = () => {
     }
 }
 validation()
+submitBrif()

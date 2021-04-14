@@ -7,14 +7,14 @@ const briefing = {
         document.querySelector('.about-briefing').addEventListener('click', (e) => {
             document.querySelector('.header__offer').insertAdjacentHTML('afterend',
                 `<div class="about-briefing__popUp">
-                        <p>Бриф — небольшая анкета между клиентом <br>
-                          и исполнителем, в которой закрепляются<br>
-                          важные параметры и данные для разработки<br>
-                          сайта. Бриф по сути является техническим<br>
-                          заданием. Именно благодаря ему становятся<br>
-                          понятными исходные данные и предпочтения<br>
-                          заказчика, что позволяет создать продукт,<br>
-                          полностью отвечающий поставленным<br>
+                        <p>Бриф — небольшая анкета между клиентом
+                          и исполнителем, в которой закрепляются
+                          важные параметры и данные для разработки
+                          сайта. Бриф по сути является техническим
+                          заданием. Именно благодаря ему становятся
+                          понятными исходные данные и предпочтения
+                          заказчика, что позволяет создать продукт
+                          полностью отвечающий поставленным
                           требованиям.
                         </p>
                         <img src="../img/miniWaves.jpg" alt="">
@@ -24,7 +24,7 @@ const briefing = {
             this.closePopUp()
             // Проверяем есть ли класс который показывает поп ап, если есть, то при клике удаляем его
             // не допуская клонирования
-            if (document.querySelector('.popUpActive').classList.contains('popUpActive') === true
+            if (document.querySelector('.popUpActive')
                 && e.target === document.querySelector('.about-briefing')) {
                 document.querySelector(".about-briefing__popUp").remove()
             }

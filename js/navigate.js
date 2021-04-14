@@ -13,11 +13,12 @@ const menu = {
                     item.classList.remove('closeIcon')
                 } else if (e.target === menuIcon || item) {
                     item.classList.add('closeIcon')
-                    if (document.body.clientWidth <= 1024 && item.classList.contains('closeIcon') === true){
-                        document.querySelector('.feedBack-contacts').classList.toggle('test')
-                    }
+                    // Условия для адаптива под планшет
                 }
             })
+            if (document.body.clientWidth <= 1024 && document.body.clientWidth >= 768) {
+                document.querySelector('.feedBack-contacts').classList.toggle('invisible')
+            }
             this.renderNavigate()
             this.scrollNavigate()
         })
@@ -49,9 +50,9 @@ const menu = {
     removeNavigate() {
         document.querySelector('.nav').remove()
     },
-    scrollNavigate(){
+    scrollNavigate() {
         let links = document.querySelectorAll('a[href^="#"]')
-        for (let link of links){
+        for (let link of links) {
             link.addEventListener('click', (e) => {
                 e.preventDefault()
                 const id = link.getAttribute('href');
