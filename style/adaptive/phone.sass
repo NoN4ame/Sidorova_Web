@@ -1,6 +1,92 @@
-@media screen and (min-width: 319px) and (max-width: 768px)
+@media screen and (min-width: 320px) and (max-width: 767px)
+  .container
+    width: auto
+    margin: 0 19px
+  .header
+    position: relative
+  .header__nav
+    display: block
+    &>.nav
+      left: 0
+      &>ul
+        display: block
+        &>li
+          padding-bottom: 20px
+          &:first-child
+            padding-top: 20px
+          &:last-child
+            padding: 0
   .feedBack-contacts
     display: none
   .header__offer
     &>h1:first-of-type
       font-size: 48px
+  .about-briefing__popUp
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -80%)
+    width: 320px
+    height: auto
+    &>p
+      padding: 44px 19px
+    &>img
+      display: none
+  .header__content
+    height: auto
+  .header>.banner>.container>.banner__text
+    padding: 17.5px 45px 17.5px 15px
+    text-align: left !important
+    width: 100%
+  .developmentStages > .stages > li
+    align-items: normal!important
+    width: 255px
+    &:before
+      height: 25px
+  .projects__header
+    &>img
+      display: none
+  .projects__content
+    grid-template-columns: none !important
+    grid-gap: 20px !important
+    grid-template-rows: none !important
+    &>div
+      &:nth-child(2)
+        grid-column: auto !important
+        grid-row: auto !important
+      &:nth-child(3)
+        &>img
+          width: 230px!important
+          height: auto!important
+      &:nth-child(4)
+        grid-row: 3
+      &:nth-child(5)
+        grid-row: 4
+        &>img
+          padding: 12px !important
+          width: 255px
+      &>img
+        width: 230px
+        position: initial
+        padding: 25px !important
+  .price_container
+    display: block !important
+  .project__price
+    padding-bottom: 40px !important
+  .briefing-banner__text
+    width: auto !important
+  .briefing
+    &>.headers
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 40px
+  .form__container > input
+    margin: 0 2px
+  textarea
+    margin: 0 2px
+  .footer>.container>.headers
+    display: flex
+    flex-wrap: wrap
+@media screen and (min-width: 375px) and (max-width: 767px)
+  .developmentStages > .stages > li
+    width: auto

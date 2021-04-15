@@ -15,7 +15,9 @@ main
       list-style-type: none
       padding-bottom: 40px
       font-size: $main_text
-      &>a
+      display: flex
+      align-items: center
+      &>p>a
         color: $blue
         &:hover
           cursor: pointer
@@ -117,6 +119,8 @@ main
       font-size: $headers
       color: $blue
       font-weight: bold
+.remainder
+  font-size: $main_text
 
 .form__container
   display: flex
