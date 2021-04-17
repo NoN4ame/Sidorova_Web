@@ -104,3 +104,26 @@ textarea
   width: 556px
   left: 40%
   background-color: white
+.disabled
+  border: 2px solid grey
+  color: grey
+  background-color: transparent
+  font-size: $social
+  font-weight: bold
+  outline: none
+  box-sizing: border-box
+  transition: background-color 0.4s
+  height: 56px
+  width: 261px
+  &:focus
+    outline: none
+    color: grey
+    background-color: transparent
+    border-color: grey
+  &:hover
+    cursor: default
+    background-color: transparent
+    color: grey
+    border-color: grey
+  &:active
+    border-color: grey

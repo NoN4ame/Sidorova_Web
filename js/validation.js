@@ -95,80 +95,81 @@ const errorMsg = (where, text) => {
 }
 const validation = function () {
     container.addEventListener('click', function (e) {
-            e.preventDefault()
-            let id = parseInt(document.getElementById('currentId').textContent)
-            let not = false
-            let textArea = document.getElementById('mainSections')
-            if (e.target === document.getElementById('next')) {
-                //Удаляем все классы ошибки в форме
-                removeError()
-                for (let i = 0; i < input.length; i++) {
-                    // Если поле не пустое удаляем класс ошибки
-                    if (input[i].value && regexp_text.test(input[i].value)) {
+        e.preventDefault()
+        let id = parseInt(document.getElementById('currentId').textContent)
+        let not = false
+        let textArea = document.getElementById('mainSections')
+        if (e.target === document.getElementById('next')) {
+            //Удаляем все классы ошибки в форме
+            removeError()
+            document.getElementById('next').classList.remove('disabled')
+            for (let i = 0; i < input.length; i++) {
+                // Если поле не пустое удаляем класс ошибки
+                if (input[i].value && regexp_text.test(input[i].value)) {
+                    input[i].classList.remove('notValid')
+                    // Проверка правильности ввода номера телефона
+                    if (input[i].classList.contains('phone') && regexp_phone.test(input[i].value)) {
                         input[i].classList.remove('notValid')
-                        // Проверка правильности ввода номера телефона
-                        if (input[i].classList.contains('phone') && regexp_phone.test(input[i].value)) {
-                            input[i].classList.remove('notValid')
-                            // Если класс есть, но номер написан не правильно, выводим текст ошибки
-                        } else if (input[i].classList.contains('phone')) {
-                            input[i].classList.add('notValid')
-                            errorMsg(input[i], `Введите номер формата 7-000-000-00-00`)
-                            // Проверка email
-                        } else if (input[i].classList.contains('email') && regexp_email.test(input[i].value)) {
-                            input[i].classList.remove('notValid')
-                            // Если класс email есть, но введен не правильно, выводим текст ошибки
-                        } else if (input[i].classList.contains('email') && regexp_email.test(input[i].value) !== true) {
-                            input[i].classList.add('notValid')
-                            errorMsg(input[i], `Введите email в формате check@example.com`)
-                        }
-                        // Если поле пустой и оно не обязательно для заполнения, удаляем ошибку
-                    } else if (!input[i].value && input[i].classList.contains('optional')) {
-                        input[i].classList.remove('notValid')
-                        // Если поле пустое, выводим текст ошибки
-                    } else if (!input[i].value) {
+                        // Если класс есть, но номер написан не правильно, выводим текст ошибки
+                    } else if (input[i].classList.contains('phone')) {
                         input[i].classList.add('notValid')
-                        errorMsg(input[i], 'Обязательное поле для заполнения')
-                        not = true
+                        errorMsg(input[i], `Введите номер формата 7-000-000-00-00`)
+                        // Проверка email
+                    } else if (input[i].classList.contains('email') && regexp_email.test(input[i].value)) {
+                        input[i].classList.remove('notValid')
+                        // Если класс email есть, но введен не правильно, выводим текст ошибки
+                    } else if (input[i].classList.contains('email') && regexp_email.test(input[i].value) !== true) {
+                        input[i].classList.add('notValid')
+                        errorMsg(input[i], `Введите email в формате check@example.com`)
                     }
+                    // Если поле пустой и оно не обязательно для заполнения, удаляем ошибку
+                } else if (!input[i].value && input[i].classList.contains('optional')) {
+                    input[i].classList.remove('notValid')
+                    // Если поле пустое, выводим текст ошибки
+                } else if (!input[i].value) {
+                    document.getElementById('next').classList.add('disabled')
+                    input[i].classList.add('notValid')
+                    errorMsg(input[i], 'Обязательное поле для заполнения')
+                    not = true
                 }
-                if (textArea) {
-                    if (!textArea.value) {
-                        textArea.classList.add('notValid')
-                        errorMsg(textArea, 'Обязательное поле для заполнения')
-                        not = true
-                    } else if (textArea.value) {
-                        textArea.classList.remove('notValid')
-                    }
-                }
-                if (!not) {
-                    answers(id)
-                    briefing.nextPage(id)
-                    renderAnswers()
-                }
-            } else if (e.target === document.getElementById('back')) {
-                answers(id)
-                briefing.backPage(id)
-                renderAnswers()
-            } else if (e.target === document.getElementById('submit')) {
-                for (let answers in question) {
-                    answer.push(question[answers].answers)
-                }
-                answer.push(new Object({
-                    name: input[0].value,
-                    contacts: input[1].value
-                }))
-                const hasVal = obj => {
-                    for (let key in obj) {
-                        if (obj.hasOwnProperty(key)) return true
-                    }
-                    return false
-                }
-                const filtered = answer.filter(el => hasVal(el))
-                answer = filtered
-
             }
+            if (textArea) {
+                if (!textArea.value) {
+                    textArea.classList.add('notValid')
+                    errorMsg(textArea, 'Обязательное поле для заполнения')
+                    not = true
+                } else if (textArea.value) {
+                    textArea.classList.remove('notValid')
+                }
+            }
+            if (!not) {
+                document.getElementById('next').classList.remove('disabled')
+                answers(id)
+                briefing.nextPage(id)
+                renderAnswers()
+            }
+        } else if (e.target === document.getElementById('back')) {
+            answers(id)
+            briefing.backPage(id)
+            renderAnswers()
+        } else if (e.target === document.getElementById('submit')) {
+            for (let answers in question) {
+                answer.push(question[answers].answers)
+            }
+            answer.push(new Object({
+                name: input[0].value,
+                contacts: input[1].value
+            }))
+            const hasVal = obj => {
+                for (let key in obj) {
+                    if (obj.hasOwnProperty(key)) return true
+                }
+                return false
+            }
+            const filtered = answer.filter(el => hasVal(el))
+            answer = filtered
         }
-    )
+    })
 }
 //const submitBrif = function () {
 //    document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
@@ -197,13 +198,13 @@ const renderAnswers = () => {
             let value = question[id].answers[answer]
             if (input[i].id === answer || input[i].className === answer) {
                 input[i].value = value
-            } else if (document.getElementById('mainSections')){
-                if (document.getElementById('mainSections').id === answer){
+            } else if (document.getElementById('mainSections')) {
+                if (document.getElementById('mainSections').id === answer) {
                     document.getElementById('mainSections').value = value
                 }
             }
         }
     }
-
 }
+
 validation()

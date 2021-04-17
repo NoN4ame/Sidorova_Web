@@ -2,15 +2,20 @@
   .container
     width: auto
     margin: 0 19px
+    overflow: hidden
   .header
     position: relative
   .header__nav
     display: block
-    &>.nav
-      left: 0
-      &>ul
+    & > .nav
+      position: absolute
+      left: 20px
+      top: 103px
+      background-color: white
+      width: 100%
+      & > ul
         display: block
-        &>li
+        & > li
           padding-bottom: 20px
           &:first-child
             padding-top: 20px
@@ -19,7 +24,7 @@
   .feedBack-contacts
     display: none
   .header__offer
-    &>h1:first-of-type
+    & > h1:first-of-type
       font-size: 48px
   .about-briefing__popUp
     position: absolute
@@ -28,55 +33,63 @@
     transform: translate(-50%, -80%)
     width: 320px
     height: auto
-    &>p
+    & > p
       padding: 44px 19px
-    &>img
+    & > img
       display: none
   .header__content
     height: auto
-  .header>.banner>.container>.banner__text
+  .header > .banner > .container > .banner__text
     padding: 17.5px 45px 17.5px 15px
-    text-align: left !important
+    text-align: left
     width: 100%
-  .developmentStages > .stages > li
-    align-items: normal!important
-    width: 255px
+  .developmentStages > .stages > .stages__numbers
+    align-items: normal
+    width: 285px
     &:before
       height: 25px
   .projects__header
-    &>img
+    & > img
       display: none
-  .projects__content
-    grid-template-columns: none !important
-    grid-gap: 20px !important
-    grid-template-rows: none !important
-    &>div
+  .projects > .projects-adaptive
+    grid-template-columns: none
+    grid-gap: 20px
+    grid-template-rows: none
+    & > div
       &:nth-child(2)
-        grid-column: auto !important
-        grid-row: auto !important
+        grid-column: auto
+        grid-row: auto
       &:nth-child(3)
-        &>img
-          width: 230px!important
-          height: auto!important
+        & > img
+          width: 230px
+          height: auto
       &:nth-child(4)
         grid-row: 3
       &:nth-child(5)
         grid-row: 4
-        &>img
-          padding: 12px !important
+        & > img
+          padding: 12px
           width: 255px
-      &>img
+      & > img
         width: 230px
-        position: initial
-        padding: 25px !important
-  .price_container
-    display: block !important
-  .project__price
-    padding-bottom: 40px !important
-  .briefing-banner__text
-    width: auto !important
+        padding: 25px
+  .price > .price_container
+    display: block
+    width: 255px
+  .price__content
+    &> .project__main, .project__moreInfo
+      &>.project__price
+        padding-bottom: 40px
+    &>.project__size
+      font-size: 20px
+      padding: 5px 10px
+    &:last-child>.project__moreInfo>.project__price
+      border: none
+      padding: 0
+  .banner>.container>.briefing-banner__text
+    width: auto
   .briefing
-    &>.headers
+    & > .headers
       display: flex
       flex-wrap: wrap
       margin-bottom: 40px
@@ -84,9 +97,52 @@
     margin: 0 2px
   textarea
     margin: 0 2px
-  .footer>.container>.headers
+  .footer > .container > .headers
     display: flex
     flex-wrap: wrap
+
 @media screen and (min-width: 375px) and (max-width: 767px)
   .developmentStages > .stages > li
     width: auto
+
+@media screen and (min-width: 375px) and (max-width: 850px) and (orientation: landscape)
+  .stages>li:last-child
+    width: 75%
+  .remainder
+    width: 90%
+  .briefing>.headers
+    display: block
+  .projects__content
+    display: grid
+    grid-template-columns: 282px 282px
+    grid-template-rows: 283px
+    row-gap: 10px
+    column-gap: 15px
+  .projects__content > div:nth-child(4)
+    grid-row: 2
+  .projects__content > div:nth-child(5)
+    grid-row: 4/3
+    &> img
+      width: 529px
+      padding: 25px
+@media screen and (min-width: 768px) and (max-width: 850px)  and (orientation: landscape)
+  .about-briefing__popUp
+    top: -358px
+  .projects__content
+    display: grid
+    grid-template-columns: 361px 1fr
+    grid-gap: 15px
+    grid-template-rows: 362px
+    &>div
+      &:nth-child(4)
+        grid-row: auto
+      &:nth-child(5)
+        grid-row: auto
+        width: auto
+        &>img
+          width: auto
+          padding: 32px
+  .form__container input
+    margin: 0 2px
+  textarea
+    margin: 0 2px

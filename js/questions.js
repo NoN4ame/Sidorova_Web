@@ -115,7 +115,7 @@ const templates = [
                     <input id="prohibitedMaterials" type="text">
                     <div class="form__buttons">
                         <button id="back" class="btn">Назад</button>
-                        <button id="next" class="btn">Далее</button>
+                        <button id="next" class="btn disabled">Далее</button>
                     </div>
                 </div>
             </div>`
@@ -147,7 +147,7 @@ const templates = [
                     <input class="optional" id="more" type="text">
                     <div class="form__buttons">
                         <button id="back" class="btn">Назад</button>
-                        <button id="next" class="btn">Далее</button>
+                        <button id="next" class="btn disabled">Далее</button>
                     </div>
                 </div>
             </div>`
@@ -197,7 +197,7 @@ const templates = [
                 </div>
                     <div class="form__buttons">
                         <button id="back" class="btn">Назад</button>
-                        <button id="next" class="btn">Далее</button>
+                        <button id="next" class="btn disabled">Далее</button>
                     </div>
                 </div>
             </div>`
@@ -217,7 +217,7 @@ const templates = [
                     <input id="contacts" type="text">
                     <div class="form__buttons">
                         <button id="back" class="btn">Назад</button>
-                        <button id="submit" class="btn">Отправить бриф</button>
+                        <button id="submit" class="btn disabled">Отправить бриф</button>
                     </div>
                 </div>
             </div>`
