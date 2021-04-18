@@ -40,7 +40,7 @@
   .header__content
     height: auto
   .header > .banner > .container > .banner__text
-    padding: 17.5px 45px 17.5px 15px
+    padding: 17.5px 25px 17.5px 15px
     text-align: left
     width: 100%
   .developmentStages > .stages > .stages__numbers
@@ -77,6 +77,9 @@
     display: block
     width: 255px
   .price__content
+    margin-top: 50px
+    &:first-child
+      margin: 0
     &> .project__main, .project__moreInfo
       &>.project__price
         padding-bottom: 40px
@@ -100,14 +103,33 @@
   .footer > .container > .headers
     display: flex
     flex-wrap: wrap
+  .briefing__links
+    &>ul:nth-child(2n)
+      display: none
+    &>ul>li
+      margin-left: 2px
+  .modul
+    font-size: 17px
+    width: 55%
+    &>img
+      right: 25.5px
+
+
 
 @media screen and (min-width: 375px) and (max-width: 767px)
   .developmentStages > .stages > li
     width: auto
+  .modul
+    font-size: 18px
+    width: 66%
+    &>img
+      right: 15.5px
 
 @media screen and (min-width: 375px) and (max-width: 850px) and (orientation: landscape)
   .stages>li:last-child
     width: 75%
+  .stages>li:nth-child(2)
+    width: 80%
   .remainder
     width: 90%
   .briefing>.headers
@@ -125,6 +147,10 @@
     &> img
       width: 529px
       padding: 25px
+  .briefing__links > ul > li > input
+    width: 93.5%
+  .footer>.container>.headers
+    display: block
 @media screen and (min-width: 768px) and (max-width: 850px)  and (orientation: landscape)
   .about-briefing__popUp
     top: -358px

@@ -2,14 +2,15 @@ const adaptive = {
     init() {
         this.tablet()
     },
+    // Версия для планшета
     tablet() {
         let projectContainer = document.querySelector('.projects__content')
         if (document.body.clientWidth <= 1024) {
+            // Добавление стрелки в блок "Портфолио", для прокрутки между работами
             document.querySelector('.projects__header').insertAdjacentHTML('beforeend',
                 `<img id="slideNext" src="../img/slide.svg" alt="">`)
             projectContainer.style.position = 'relative'
             projectContainer.style.right = '0'
-
             let slideArrow = document.getElementById('slideNext')
             slideArrow.addEventListener('click', function (e) {
                 // Расчет расстояния от правого края при слайде в проектах

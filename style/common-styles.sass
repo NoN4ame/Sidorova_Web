@@ -98,32 +98,42 @@ textarea
 
 .shadow
   position: absolute
-  bottom: 5%
   z-index: 1000
   height: 362px
   width: 556px
-  left: 40%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+.modul
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
   background-color: white
-.disabled
-  border: 2px solid grey
-  color: grey
-  background-color: transparent
-  font-size: $social
-  font-weight: bold
-  outline: none
-  box-sizing: border-box
-  transition: background-color 0.4s
-  height: 56px
-  width: 261px
-  &:focus
-    outline: none
-    color: grey
-    background-color: transparent
-    border-color: grey
-  &:hover
-    cursor: default
-    background-color: transparent
-    color: grey
-    border-color: grey
-  &:active
-    border-color: grey
+  font-size: 18px
+  background-image: url("../img/submitWaves.jpg")
+  background-repeat: no-repeat
+  width: 98.5%
+  background-position: bottom
+  &>img
+    position: absolute
+    top: 18px
+    right: 17.5px
+    cursor: pointer
+  &>p
+    padding: 45px
+  &>button
+    cursor: pointer
+    margin-top: 86px
+    margin-bottom: 82px
+    margin-left: 45px
+    padding: 16px
+    background-color: black
+    color: white
+    width: auto
+    height: auto
+    font-size: 18px
+    font-weight: normal
+    border: 1px solid black
+.shadowContent
+  filter: brightness(0.5)

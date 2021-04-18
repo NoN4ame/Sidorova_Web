@@ -133,40 +133,52 @@ textarea:active {
 
 .shadow {
   position: absolute;
-  bottom: 5%;
   z-index: 1000;
   height: 362px;
   width: 556px;
-  left: 40%;
-  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.disabled {
-  border: 2px solid grey;
-  color: grey;
-  background-color: transparent;
-  font-size: 16px;
-  font-weight: bold;
-  outline: none;
-  box-sizing: border-box;
-  transition: background-color 0.4s;
-  height: 56px;
-  width: 261px;
+.modul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  font-size: 18px;
+  background-image: url("../img/submitWaves.jpg");
+  background-repeat: no-repeat;
+  width: 98.5%;
+  background-position: bottom;
 }
-.disabled:focus {
-  outline: none;
-  color: grey;
-  background-color: transparent;
-  border-color: grey;
+.modul > img {
+  position: absolute;
+  top: 18px;
+  right: 17.5px;
+  cursor: pointer;
 }
-.disabled:hover {
-  cursor: default;
-  background-color: transparent;
-  color: grey;
-  border-color: grey;
+.modul > p {
+  padding: 45px;
 }
-.disabled:active {
-  border-color: grey;
+.modul > button {
+  cursor: pointer;
+  margin-top: 86px;
+  margin-bottom: 82px;
+  margin-left: 45px;
+  padding: 16px;
+  background-color: black;
+  color: white;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  font-weight: normal;
+  border: 1px solid black;
+}
+
+.shadowContent {
+  filter: brightness(0.5);
 }
 
 * {
@@ -306,6 +318,7 @@ a {
   position: relative;
   width: 37px;
   height: 24px;
+  top: 3px;
 }
 .menu-icon:hover {
   cursor: pointer;
@@ -571,7 +584,7 @@ a {
   }
 
   .header > .banner > .container > .banner__text {
-    padding: 17.5px 45px 17.5px 15px;
+    padding: 17.5px 25px 17.5px 15px;
     text-align: left;
     width: 100%;
   }
@@ -621,6 +634,12 @@ a {
     width: 255px;
   }
 
+  .price__content {
+    margin-top: 50px;
+  }
+  .price__content:first-child {
+    margin: 0;
+  }
   .price__content > .project__main > .project__price, .price__content .project__moreInfo > .project__price {
     padding-bottom: 40px;
   }
@@ -655,15 +674,42 @@ a {
     display: flex;
     flex-wrap: wrap;
   }
+
+  .briefing__links > ul:nth-child(2n) {
+    display: none;
+  }
+  .briefing__links > ul > li {
+    margin-left: 2px;
+  }
+
+  .modul {
+    font-size: 17px;
+    width: 55%;
+  }
+  .modul > img {
+    right: 25.5px;
+  }
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .developmentStages > .stages > li {
     width: auto;
   }
+
+  .modul {
+    font-size: 18px;
+    width: 66%;
+  }
+  .modul > img {
+    right: 15.5px;
+  }
 }
 @media screen and (min-width: 375px) and (max-width: 850px) and (orientation: landscape) {
   .stages > li:last-child {
     width: 75%;
+  }
+
+  .stages > li:nth-child(2) {
+    width: 80%;
   }
 
   .remainder {
@@ -692,6 +738,14 @@ a {
   .projects__content > div:nth-child(5) > img {
     width: 529px;
     padding: 25px;
+  }
+
+  .briefing__links > ul > li > input {
+    width: 93.5%;
+  }
+
+  .footer > .container > .headers {
+    display: block;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 850px) and (orientation: landscape) {
@@ -824,8 +878,9 @@ main {
   border: none;
 }
 .price__content .project__size {
+  font-size: 18px;
   font-weight: bold;
-  padding: 10px 13px;
+  padding: 5px 10px;
   border: 1px solid #000000;
   background-color: #000000;
   color: #FFFFFF;
@@ -844,6 +899,10 @@ main {
   color: #0075ff;
   margin-top: 23px;
   margin-bottom: 20px;
+}
+.price__content > .project__moreInfo > .project__price {
+  border: none;
+  padding: 0;
 }
 
 .briefing-banner__text {
@@ -880,6 +939,11 @@ main {
 
 .remainder {
   font-size: 18px;
+  margin-top: 40px;
+}
+
+#form {
+  position: relative;
 }
 
 .form__container {
@@ -892,7 +956,7 @@ main {
   font-size: 18px;
 }
 .form__container label:first-child {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .form__container input {
   padding: 16px 0 16px 16px;

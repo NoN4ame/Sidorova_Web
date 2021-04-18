@@ -1,8 +1,9 @@
 const briefing = {
     init() {
         this.aboutBriefing()
-        templates[0].contacts(1)
+        templates[0].contacts(0)
     },
+    // Попап о брифинге
     aboutBriefing() {
         document.querySelector('.about-briefing').addEventListener('click', (e) => {
             document.querySelector('.header__offer').insertAdjacentHTML('afterend',
@@ -46,8 +47,9 @@ const briefing = {
             }
         })
     },
+    // Методы для перехода между страницами брифинга
     nextPage(id) {
-        if (id < 5) {
+        if (id < 4) {
             id++
             renderTemplate(id)
         } else if (id > 1) {
@@ -58,34 +60,31 @@ const briefing = {
     backPage(id) {
         id--
         renderTemplate(id)
-    }
-}
+    },
 
+}
+// Отрисовка шаблонов для брифинга
+// Где id это номер страницы
 function renderTemplate(id) {
     switch (id) {
         case 1:
             if (id === 1) {
-                templates[0].contacts(id)
+                templates[0].contacts(id - 1)
             }
             break
         case 2:
             if (id === 2) {
-                templates[1].aboutCompany(id)
+                templates[1].aboutCompany(id - 1)
             }
             break
         case 3:
             if (id === 3) {
-                templates[2].design(id)
+                templates[2].design(id - 1)
             }
             break
         case 4:
             if (id === 4) {
-                templates[3].preferences(id)
-            }
-            break
-        case 5:
-            if (id === 5) {
-                templates[4].feedBack(id)
+                templates[3].feedBack(id - 1)
             }
     }
 }

@@ -3,19 +3,22 @@ const menu = {
         this.showMenu()
         this.scrollNavigate()
     },
+    // Навигация
     showMenu() {
         let nav = document.querySelectorAll('.icon')
         let menuIcon = document.querySelector('.menu-icon')
+        // При клике на иконку меню
         document.querySelector('.menu-icon').addEventListener('click', (e) => {
             nav.forEach(item => {
+                // Если меню навигации открыто, то при клике на иконку, скрываем меню и меняем иконку обратно
                 if ((e.target === menuIcon || item) && item.classList.contains('closeIcon') === true) {
-                    document.querySelector('.feedBack-contacts').classList.remove('test')
                     item.classList.remove('closeIcon')
+                // Если меню закрыто, то при клике открываем его и меняем иконку на "X"
                 } else if (e.target === menuIcon || item) {
                     item.classList.add('closeIcon')
-                    // Условия для адаптива под планшет
                 }
             })
+            // Условия для адаптива
             if (document.body.clientWidth <= 1024 && document.body.clientWidth >= 768) {
                 document.querySelector('.feedBack-contacts').classList.toggle('invisible')
             }
@@ -24,6 +27,7 @@ const menu = {
         })
 
     },
+    // Шаблон навигации
     navigateTemplate() {
         document.querySelector('.menu-icon').insertAdjacentHTML('afterend',
             `<section class="nav">
@@ -35,11 +39,14 @@ const menu = {
                     </ul>
                   </section>`)
     },
+    // Отрисовка шаблона навигации
     renderNavigate() {
         if (document.querySelector('.icon').classList.contains('closeIcon') === true) {
             this.navigateTemplate()
+            // Добавляем класс анимации с небольшой задержкой, после инициализации навигации
             setTimeout(this.openNavigateAnimate, 50)
         } else {
+            // Добавляем класс анимации с небольшой задержкой, после удаления навигации
             document.querySelector('.nav').classList.remove('active')
             setTimeout(this.removeNavigate, 50)
         }
@@ -50,6 +57,7 @@ const menu = {
     removeNavigate() {
         document.querySelector('.nav').remove()
     },
+    // Плавный скролл для якорных ссылок
     scrollNavigate() {
         let links = document.querySelectorAll('a[href^="#"]')
         for (let link of links) {

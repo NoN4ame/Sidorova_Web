@@ -1,5 +1,4 @@
 const question = [
-    {},
     {
         id: 1,
         header: "Контактная информация",
@@ -46,30 +45,22 @@ const question = [
     },
     {
         id: 4,
-        header: "Вкусовые предпочтения",
-        questions: {
-            linksForSiteWhatYouLike: "1. Оставьте ссылки на сайты, которые вам нравятся",
-            linksFroSiteWhatYouDontLike: "2. Оставьте ссылки на сайты, которые вам НЕ нравятся"
-
-        },
-        answers: {}
-    },
-    {
-        id: 5,
         header: "Удобный способ связи с вами",
         questions: {
             name: "1. Как к вам обращаться?",
             phone: "2. Контакты"
-        }
+        },
+        answers: {}
     }
 ]
+// Шаблоны для брифинга
 const templates = [
     {
         contacts(id) {
             document.getElementById('form').innerHTML = `<div class="contact">
                 <div class="briefing__header">
                     <h1 class="headers">${question[id].header}</h1>
-                    <span id="currentId">${question[id].id}/5</span>
+                    <span id="currentId">${question[id].id}/4</span>
                 </div>
                 <div class="form__container">
                     <label for="companyName">${question[id].questions.companyName}</label>
@@ -82,7 +73,7 @@ const templates = [
                     <input class="email" id="email" type="text">
                     <label for="social">${question[id].questions.socialNetworks}</label>
                     <input id="social" type="text">
-                    <button id="next" class="btn">Далее</button>
+                    <button type="button" id="next" class="btn">Далее</button>
                 </div>
             </div>`
         }
@@ -92,7 +83,7 @@ const templates = [
             document.getElementById('form').innerHTML = `<div class="contact">
                 <div class="briefing__header">
                     <h1 class="headers">${question[id].header}</h1>
-                    <span id="currentId">${question[id].id}/5</span>
+                    <span id="currentId">${question[id].id}/4</span>
                 </div>
                 <div class="form__container">
                     <label for="fieldOfActivity">${question[id].questions.fieldOfActivity}</label>
@@ -114,8 +105,8 @@ const templates = [
                     <label for="prohibitedMaterials">${question[id].questions.prohibitedMaterials}</label>
                     <input id="prohibitedMaterials" type="text">
                     <div class="form__buttons">
-                        <button id="back" class="btn">Назад</button>
-                        <button id="next" class="btn disabled">Далее</button>
+                        <button type="button" id="back" class="btn">Назад</button>
+                        <button type="button" id="next" class="btn">Далее</button>
                     </div>
                 </div>
             </div>`
@@ -126,7 +117,7 @@ const templates = [
             document.getElementById('form').innerHTML = `<div class="contact">
                 <div class="briefing__header">
                     <h1 class="headers">${question[id].header}</h1>
-                    <span id="currentId">${question[id].id}/5</span>
+                    <span id="currentId">${question[id].id}/4</span>
                 </div>
                 <div class="form__container">
                     <label for="corporateIdentity">${question[id].questions.corporateIdentity}</label>
@@ -141,63 +132,13 @@ const templates = [
                     <input id="siteAppearance" type="text">
                     <label for="mainSections">${question[id].questions.mainSections}</label>
                     <textarea name="mainSections" id="mainSections" cols="30" rows="13"></textarea>
-                    <label for="adaptive">${question[id].questions.adaptive}</label>
-                    <input id="adaptive" type="text">
+                    <label for="adaptiveVersion">${question[id].questions.adaptive}</label>
+                    <input id="adaptiveVersion" type="text">
                     <label for="more">${question[id].questions.more}</label>
                     <input class="optional" id="more" type="text">
                     <div class="form__buttons">
-                        <button id="back" class="btn">Назад</button>
-                        <button id="next" class="btn disabled">Далее</button>
-                    </div>
-                </div>
-            </div>`
-        }
-    },
-    {
-        preferences(id) {
-            document.getElementById('form').innerHTML = `<div class="contact">
-                <div class="briefing__header">
-                    <h1 class="headers">${question[id].header}</h1>
-                    <span id="currentId">${question[id].id}/5</span>
-                </div>
-                <div class="form__container">
-                
-                    <label for="corporateIdentity">${question[id].questions.linksForSiteWhatYouLike}</label>
-                    <div class="briefing__links">
-                        <ul>
-                            <li><p>Ссылки</p></li>
-                            <li><input class="link_one" type="text"></li>
-                            <li><input class="link_two" type="text"></li>
-                            <li><input class="link_three" type="text"></li>
-                        </ul>
-                        <ul>
-                            <li><p>Что нравится?</p></li>
-                            <li><input class="what_likeOne" type="text"></li>
-                            <li><input class="what_likeTwo" type="text"></li>
-                            <li><input class="what_likeThree" type="text"></li>
-                        </ul>
-                    </div>
-                
-                <div>    
-                    <label>${question[id].questions.linksFroSiteWhatYouDontLike}</label>
-                     <div class="briefing__links">
-                        <ul>
-                            <li><p>Ссылки</p></li>
-                            <li><input class="link_dontLikeOne" type="text"></li>
-                            <li><input class="link_dontLikeTwo" type="text"></li>
-                            <li><input class="link_dontLikeThree" type="text"></li>
-                        </ul>
-                        <ul>
-                            <li><p>Что Не нравится?</p></li>
-                            <li><input class="what_dontLikeOne" type="text"></li>
-                            <li><input class="what_dontLikeTwo" type="text"></li>
-                            <li><input class="what_dontLikeThree" type="text"></li>
-                        </ul>
-                    </div>
-                </div>
-                    <div class="form__buttons">
-                        <button id="back" class="btn">Назад</button>
-                        <button id="next" class="btn disabled">Далее</button>
+                        <button type="button" id="back" class="btn">Назад</button>
+                        <button type="button" id="next" class="btn">Далее</button>
                     </div>
                 </div>
             </div>`
@@ -208,7 +149,7 @@ const templates = [
             document.getElementById('form').innerHTML = `<div class="contact">
                 <div class="briefing__header">
                     <h1 class="headers">${question[id].header}</h1>
-                    <span id="currentId">${question[id].id}/5</span>
+                    <span id="currentId">${question[id].id}/4</span>
                 </div>
                 <div class="form__container">
                     <label for="name">${question[id].questions.name}</label>
@@ -216,8 +157,8 @@ const templates = [
                     <label for="contacts">${question[id].questions.phone}</label>
                     <input id="contacts" type="text">
                     <div class="form__buttons">
-                        <button id="back" class="btn">Назад</button>
-                        <button id="submit" class="btn disabled">Отправить бриф</button>
+                        <button type="button" id="back" class="btn">Назад</button>
+                        <button type="submit" id="submit" class="btn">Отправить бриф</button>
                     </div>
                 </div>
             </div>`

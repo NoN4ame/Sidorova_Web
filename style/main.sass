@@ -81,8 +81,9 @@ main
       padding-bottom: 0
       border: none
     &__size
+      font-size: 18px
       font-weight: bold
-      padding: 10px 13px
+      padding: 5px 10px
       border: 1px solid #000000
       background-color: #000000
       color: #FFFFFF
@@ -98,6 +99,10 @@ main
       color: $blue
       margin-top: 23px
       margin-bottom: 20px
+  &>.project__moreInfo
+    &>.project__price
+      border: none
+      padding: 0
 .briefing-banner__text
   width: 955px
 .briefing
@@ -121,7 +126,9 @@ main
       font-weight: bold
 .remainder
   font-size: $main_text
-
+  margin-top: 40px
+#form
+  position: relative
 .form__container
   display: flex
   flex-flow: column
@@ -130,7 +137,7 @@ main
     padding-top: 30px
     font-size: $main_text
     &:first-child
-      padding-top: 20px
+      padding-top: 10px
   & input
     padding: 16px 0 16px 16px
     border: 1px solid #CBCBCB
