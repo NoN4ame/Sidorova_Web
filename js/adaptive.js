@@ -28,10 +28,6 @@ const adaptive = {
                     this.style.transform = 'rotate(0deg)'
                 }
             })
-            // Расчет расстояния для якоря (прокрутка в начало страницы)
-            let scrollUp = document.getElementById('scrollUp')
-            let left = 867 - (1024 - document.body.clientWidth)
-            scrollUp.style.left = `${left}px`
         }
     }
 }
