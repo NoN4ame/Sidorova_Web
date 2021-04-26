@@ -18,8 +18,8 @@ const briefing = {
                           полностью отвечающий поставленным
                           требованиям.
                         </p>
-                        <img src="../img/miniWaves.jpg" alt="">
-                        <button><img class="closePopUp" src="../img/close.svg" alt=""></button>
+                        <img src="img/miniWaves.jpg" alt="">
+                        <button><img class="closePopUp" src="img/close.svg" alt=""></button>
                       </div>`)
             setTimeout(this.showPopUp, 100)
             this.closePopUp()
