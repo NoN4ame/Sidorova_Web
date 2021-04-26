@@ -8,7 +8,7 @@ const adaptive = {
         if (document.body.clientWidth <= 1024) {
             // Добавление стрелки в блок "Портфолио", для прокрутки между работами
             document.querySelector('.projects__header').insertAdjacentHTML('beforeend',
-                `<img id="slideNext" src="../img/slide.svg" alt="">`)
+                `<img id="slideNext" src="img/slide.svg" alt="">`)
             projectContainer.style.position = 'relative'
             projectContainer.style.right = '0'
             let slideArrow = document.getElementById('slideNext')
